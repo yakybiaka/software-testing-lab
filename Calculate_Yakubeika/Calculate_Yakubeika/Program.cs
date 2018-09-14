@@ -93,6 +93,7 @@ namespace Calculate_Yakubeika
 
         public static void Average_Score_One(string[,] list, int lastRow, int lastColumn)
         {
+
             Console.WriteLine("Enter name of Student");
             string name = Console.ReadLine();
             float sum = 0,average_stud=0;
