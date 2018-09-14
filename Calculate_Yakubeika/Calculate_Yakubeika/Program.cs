@@ -57,7 +57,7 @@ namespace Calculate_Yakubeika
 
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Wrong case!");
+                    Console.WriteLine(" Wrong case! ");
                 }
             }
             
