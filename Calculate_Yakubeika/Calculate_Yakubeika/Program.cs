@@ -33,7 +33,7 @@ namespace Calculate_Yakubeika
             {
                 try
                 {
-                    Console.WriteLine("\nSelect an action:");
+                    Console.WriteLine("\n Select an action:");
                     caseSwitch = Convert.ToInt32(Console.ReadLine());
                     switch (caseSwitch)
                     {
