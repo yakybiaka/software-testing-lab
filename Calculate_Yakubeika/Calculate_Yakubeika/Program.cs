@@ -25,7 +25,6 @@ namespace Calculate_Yakubeika
                 for (int j = 0; j < (int)lastCell.Column; j++)
                     list[i, j] = ObjWorkSheet.Cells[i + 1, j + 1].Text.ToString();
 
-
             Console.WriteLine("Actions : \n 1 - Academic Performance of ALL Students \n 2 - Academic Performance of ONE Student \n 3 - Average Score of the whole Group \n 0 - Exit");
 
             int caseSwitch;
