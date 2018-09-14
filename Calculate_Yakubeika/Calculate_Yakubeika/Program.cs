@@ -11,6 +11,7 @@ namespace Calculate_Yakubeika
         static void Main(string[] args)
         {
             Console.WriteLine("Please, wait! Reading file Students.exe");
+
             string Path = Environment.CurrentDirectory + "\\Students.xlsx";
             Microsoft.Office.Interop.Excel.Application ObjWorkExcel = new Microsoft.Office.Interop.Excel.Application(); //open Excel
             Microsoft.Office.Interop.Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open(Path, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing); //open file 
