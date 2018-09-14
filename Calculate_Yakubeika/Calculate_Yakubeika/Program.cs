@@ -87,6 +87,7 @@ namespace Calculate_Yakubeika
                     }
                 }
             average = sum / k;
+
             Console.WriteLine("Average Score for Group: "+average);
             }
 
