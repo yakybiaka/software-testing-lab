@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3AFAAFDC-E829-44A6-BBD1-4B63E506102D}</ProjectGuid>
+    <ProjectGuid>{E3E7C714-3D16-421F-9B5D-0AD43CB0A712}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestTriangle</RootNamespace>
-    <AssemblyName>UnitTestTriangle</AssemblyName>
+    <RootNamespace>CheckTriangleTests</RootNamespace>
+    <AssemblyName>CheckTriangleTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,17 +48,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TriangleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TriangleMeth\TriangleMeth.csproj">
-      <Project>{82b65c56-76b6-411e-acbc-1e27094b0ea0}</Project>
-      <Name>TriangleMeth</Name>
+    <ProjectReference Include="..\CheckTriangle\CheckTriangle.csproj">
+      <Project>{f6515447-f568-4f76-b202-8f384093b412}</Project>
+      <Name>CheckTriangle</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
