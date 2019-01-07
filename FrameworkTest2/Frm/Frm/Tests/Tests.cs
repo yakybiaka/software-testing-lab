@@ -147,6 +147,10 @@ namespace Frm.Tests
 
             Assert.AreEqual(false, steps.CheckListValue());
         }
+
+        static void Main(string[] args)
+        {
+        }
     }
 }
 
