@@ -32,35 +32,20 @@ namespace Frm.Steps
             _mainPage.OpenPage();
         }
 
-        public void EnterCitiesOnMainPage()
+        public void EnterCities(string arrival, string departure)
         {
-            _mainPage.EnterCityOfArrival("Минск");
-            _mainPage.EnterCityOfArrival("Москва");
+            _mainPage.EnterCityOfArrival(arrival);
+            _mainPage.EnterCityOfArrival(departure);
         }
 
-        public void EnterDateOnMainPage()
+        public void EnterDate(DateTime date_depart, DateTime date_arrival)
         {
-            _mainPage.EnterDepartureDate("15-01-2019");
-            _mainPage.EnterDepartureBackDate("29-01-2019");
+            var DayOfDep = Convert.ToString(date_depart.Date);
+            var DayOfArriv = Convert.ToString(date_arrival.Date);
+            _mainPage.EnterDepartureDate(DayOfDep);
+            _mainPage.EnterDepartureBackDate(DayOfArriv);
         }
 
-            public void EnterSimilarCities()
-        {
-            _mainPage.EnterCityOfArrival("Минск");
-            _mainPage.EnterCityOfArrival("Минск");
-        }
-
-        public void EnterNonexistentCity()
-        {
-            _mainPage.EnterCityOfArrival("Минск");
-            _mainPage.EnterCityOfArrival("Муссучипинс");
-        }
-
-        public void EnterYesterdayDate()
-        {
-            _mainPage.EnterDepartureDate("28-12-2018");
-            _mainPage.EnterDepartureBackDate("15-01-2019");
-        }
 
         public void DecrementAdultsPassengers()
         {

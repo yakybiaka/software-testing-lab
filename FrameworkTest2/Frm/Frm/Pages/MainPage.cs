@@ -83,7 +83,7 @@ namespace Frm.Pages
 
         public void EnterDepartureBackDate(string date)
         {
-           depStrDate.Clear();
+            depStrDate.Clear();
             depStrDate.SendKeys(date);
             origin.SendKeys(Keys.Enter);
         }

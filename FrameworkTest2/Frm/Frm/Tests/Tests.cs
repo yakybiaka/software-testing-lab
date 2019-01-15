@@ -27,10 +27,13 @@ namespace Frm.Tests
         [Test] //1
         public void CheckFilterWork()
         {
+            var departDay = DateTime.Now.AddDays(-2);
+            var arrivDay = DateTime.Now;
             steps.OpenMainPage();
-            steps.EnterCitiesOnMainPage();
 
-            steps.EnterDateOnMainPage();
+            steps.EnterCities("Минск", "Москва");
+
+            steps.EnterDate(departDay, arrivDay);
 
             Assert.AreEqual(true, steps.CheckFiltersWork());
         }
@@ -38,11 +41,14 @@ namespace Frm.Tests
         [Test] //2
         public void CheckDateChecking()
         {
+            var departDay = DateTime.Now;
+            var arrivDay = DateTime.Now.AddDays(5);
+
             steps.OpenMainPage();
 
-            steps.EnterCitiesOnMainPage();
+            steps.EnterCities("Минск","Москва");
 
-            steps.EnterYesterdayDate();
+            steps.EnterDate(departDay, arrivDay);
 
             Assert.AreEqual(true, steps.CheckWinError());
         }
@@ -86,11 +92,14 @@ namespace Frm.Tests
         [Test] //6
         public void CheckSimilarCity()
         {
+            var departDay = DateTime.Now;
+            var arrivDay = DateTime.Now.AddDays(5);
+
             steps.OpenMainPage();
 
-            steps.EnterSimilarCities();
+            steps.EnterCities("Минск","Минск");
 
-            steps.EnterDateOnMainPage();
+            steps.EnterDate(departDay, arrivDay);
 
             Assert.AreEqual(true, steps.CheckWinError());
         }
@@ -98,11 +107,14 @@ namespace Frm.Tests
         [Test] //7
         public void CheckThreeChildrenAndOneParent()
         {
+            var departDay = DateTime.Now;
+            var arrivDay = DateTime.Now.AddDays(5);
+
             steps.OpenMainPage();
 
-            steps.EnterCitiesOnMainPage();
+            steps.EnterCities("Минск","Москва");
 
-            steps.EnterDateOnMainPage();
+            steps.EnterDate(departDay, arrivDay);
 
             steps.SelectPassengers();
 
@@ -139,11 +151,14 @@ namespace Frm.Tests
         [Test] //10
         public void CheckExistenceCity()
         {
+            var departDay = DateTime.Now;
+            var arrivDay = DateTime.Now.AddDays(5);
+
             steps.OpenMainPage();
 
-            steps.EnterNonexistentCity();
+            steps.EnterCities("Массачупинс","Массачупинс");
 
-            steps.EnterDateOnMainPage();
+            steps.EnterDate(departDay, arrivDay);
 
             Assert.AreEqual(false, steps.CheckListValue());
         }
